@@ -7,9 +7,11 @@
 </ul>
 
 <p> Solution of place 45/642 <b>(top 8%)</b></p>
+<h3>Contest Summary</h3>
+The objective of this competition was create a machine learning algorithm that registers two images from different viewpoints and compute the fundamental matrix. With access to a dataset of thousands of images to train and test the model.
 
 <h3>Explanation</h3>
-<p>This solution combain use the models LoFTR [1] ans SuperGlue [2] to find key point matches in a pair of images,
+<p>This solution use the models LoFTR [1] and SuperGlue [2] to find key point matches in a pair of images,
 each image is preprocesed with geometrical transformations in order to make an augmentation of the data. 
 The points coordinates finded by geometrical transformation must be returnned to original image coordinates.</p>
 <p>The fundamental matrix is finded using the robust estimator MAGSAC++ [3] avalible in openCV.</p>
